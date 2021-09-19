@@ -1,20 +1,20 @@
-version: '2.4'
+version: '3'
 
 x-app: &app
   build:
     context: .dockerdev
     dockerfile: Dockerfile
     args:
-      RUBY_VERSION: '2.6.3'
+      RUBY_VERSION: '3.0.2'
       PG_MAJOR: '13'
-      NODE_MAJOR: '11'
-      YARN_VERSION: '1.13.0'
-      BUNDLER_VERSION: '2.0.2'
+      NODE_MAJOR: '16'
+      YARN_VERSION: '1.22.1'
+      BUNDLER_VERSION: '2.2.27'
   environment: &env
     NODE_ENV: ${NODE_ENV:-development}
     RAILS_ENV: ${RAILS_ENV:-development}
     YARN_CACHE_FOLDER: /app/node_modules/.yarn-cache
-  image: example-dev:1.1.0
+  image: rails-dev:0.1.0
   tmpfs:
     - /tmp
 
@@ -80,7 +80,7 @@ services:
       interval: 5s
 
   redis:
-    image: redis:3.2-alpine
+    image: redis:6.2.5-alpine
     volumes:
       - redis:/data
     ports:
