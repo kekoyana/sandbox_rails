@@ -1,5 +1,24 @@
-# Docker for development setup
+# README
 
-Read this post for more information: [Ruby on Whales: Dockerizing Ruby and Rails development](https://evilmartians.com/chronicles/ruby-on-whales-docker-for-ruby-rails-development).
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-See this configuration in action in Martians Library demo app: <https://github.com/evilmartians/chronicles-gql-martian-library>.
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
