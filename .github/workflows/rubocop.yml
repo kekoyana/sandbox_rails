@@ -1,28 +1,18 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-# This workflow will download a prebuilt Ruby version, install dependencies and run tests with Rake
-# For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
+# 参考: https://zenn.dev/miya789/articles/github-actions-rubocop
 
-name: Ruby
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+name: rubocop
+on: [pull_request]
 jobs:
   rubocop:
+    name: runner / rubocop
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Check out code
+        uses: actions/checkout@v1
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.0.2
-     - name: rubocop
+      - name: rubocop
         uses: reviewdog/action-rubocop@v1
         with:
           rubocop_version: gemfile
