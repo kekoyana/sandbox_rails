@@ -1,7 +1,9 @@
 # 参考: https://zenn.dev/miya789/articles/github-actions-rubocop
 
 name: rubocop
-on: [pull_request]
+on:
+  - push
+  - pull_request
 jobs:
   rubocop:
     name: runner / rubocop
