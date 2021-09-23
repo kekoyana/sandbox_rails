@@ -1,24 +1,18 @@
-# README
+Railsの実験用のリポジトリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 環境構築
+dipのインストールが必要です。
+https://github.com/bibendi/dip
 
-Things you may want to cover:
+### 環境構築
 
-* Ruby version
+```sh
+$ dip provision
+```
 
-* System dependencies
+### サーバー起動
 
-* Configuration
+```sh
+$ dip rails s
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
