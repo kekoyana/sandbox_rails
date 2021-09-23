@@ -3,6 +3,9 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+const images = require.context("../images", true)
+const imagePath = name => images(name, true)
+
 import Rails from "@rails/ujs"
 
 Rails.start()
