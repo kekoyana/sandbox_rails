@@ -1,6 +1,6 @@
 # 参考: https://zenn.dev/miya789/articles/github-actions-rubocop
 
-name: rubocop
+name: linter
 on:
   - push
   - pull_request
@@ -21,3 +21,9 @@ jobs:
           rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile rubocop-performance:gemfile
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review # Default is github-pr-check
+  brakeman:
+    name: runner / brakeman
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run brakeman with reviewdog
+        uses: reviewdog/action-brakeman@v1
