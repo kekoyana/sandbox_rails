@@ -63,7 +63,6 @@ GEM
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.2)
-    bindex (0.8.1)
     binding_of_caller (1.0.0)
       debug_inspector (>= 0.0.1)
     bootsnap (1.9.0)
@@ -96,6 +95,7 @@ GEM
       activesupport (>= 5.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
+    jb (0.8.0)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -227,11 +227,6 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
-    web-console (4.1.0)
-      actionview (>= 6.0.0)
-      activemodel (>= 6.0.0)
-      bindex (>= 0.4.0)
-      railties (>= 6.0.0)
     webpacker (5.4.3)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
@@ -252,13 +247,14 @@ DEPENDENCIES
   brakeman
   capybara
   factory_bot_rails
-  listen (~> 3.3)
+  jb
+  listen
   pg (~> 1.1)
   pry-byebug
   pry-rails
   pry-stack_explorer
   puma (~> 5.0)
-  rack-mini-profiler (~> 2.0)
+  rack-mini-profiler
   rails (~> 6.1.4, >= 6.1.4.1)
   rspec-rails
   rubocop
@@ -267,7 +263,6 @@ DEPENDENCIES
   rubocop-rspec
   selenium-webdriver
   spring
-  web-console (>= 4.1.0)
   webpacker (~> 5.0)
 
 RUBY VERSION

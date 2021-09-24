@@ -9,6 +9,7 @@ gem 'pg', '~> 1.1'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'jb'
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 
@@ -21,15 +22,14 @@ group :development, :test do
 end
 
 group :development do
-  gem 'brakeman'
-  gem 'listen', '~> 3.3'
-  gem 'rack-mini-profiler', '~> 2.0'
+  gem 'brakeman', require: false
+  gem 'listen'
+  gem 'rack-mini-profiler'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
   gem 'spring'
-  gem 'web-console', '>= 4.1.0'
 end
 
 group :test do
