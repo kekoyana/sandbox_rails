@@ -9,7 +9,6 @@ name: rails
 
 on:
   - push
-  - pull_request
 
 jobs:
   rspec:
@@ -22,4 +21,7 @@ jobs:
           ruby-version: 3.0.2
           bundler-cache: true
       - name: Run tests
+        run: bundle exec rails db:test:prepare
         run: bundle exec rspec
+        env:
+          DATABASE_URL: postgres://postgres:postgres@postgres:5432

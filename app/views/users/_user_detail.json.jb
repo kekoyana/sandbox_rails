@@ -1,0 +1,9 @@
+# frozen_string_literal: true
+
+{
+  id: user.id,
+  name: user.name,
+  memo: user.memo,
+  created_at: l(user.created_at),
+  updated_at: l(user.updated_at),
+}
