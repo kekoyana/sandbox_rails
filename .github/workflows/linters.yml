@@ -1,9 +1,10 @@
 # 参考: https://zenn.dev/miya789/articles/github-actions-rubocop
 
 name: linter
+
 on:
   - push
-  - pull_request
+
 jobs:
   rubocop:
     name: runner / rubocop
@@ -24,6 +25,8 @@ jobs:
   brakeman:
     name: runner / brakeman
     runs-on: ubuntu-latest
+    env:
+      REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Run brakeman with reviewdog
         uses: reviewdog/action-brakeman@v1
