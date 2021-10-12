@@ -10,7 +10,7 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'jb'
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.5'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
